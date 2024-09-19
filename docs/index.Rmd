@@ -1,0 +1,82 @@
+---
+title: "RMD_cheat_sheet"
+author: "Cole Sheeley"
+output: html_document
+date: "2024-09-19"
+bibliography: references.bib
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# [***Week 5 RMD Cheat Sheet***]{.underline}
+
+### This code provides examples for future reference on making R markdowns to be uploaded to github
+
+## **Sections** {.tabset}
+
+### YAML settings
+
+YAML is a header that contains the document metadata and explains how to set options like title author and output format (commented out so it doesn't run)
+
+```{r}
+# ---
+#   title: "example"
+#   author: "me"
+#   date: "2024-9-19"
+#   output: html_document
+#   bibiliography: references.bib
+# ---
+```
+
+### Reading in data and loading libraries
+
+To read data and load libraries in r markdown you need to make a code chunk first. These are siginfied by 3 back ticks (\`) and an {r} which creates the code chunk. Make sure to close the code chunk by another 3 back ticks.
+
+```{r}
+# for example lets do a simply dplyr
+library(tidyverse)
+PSU_fish = read.csv("../data/PSU_Fish_Density.csv") # the .. is shell for going back two directories
+head(PSU_fish)
+```
+
+### Text formatting
+
+To format the text within an R markdown you can easily use the user interface under visual with inserting and format, but heres some short cuts to do it in the source tab
+
+-   italics, bold,
+
+### Ordered and numbered lists
+
+### Section headers
+
+### Tabsets
+
+### Code chunks
+
+```         
+-   with code chunk options (i.e echo = , eval = )
+```
+
+### Inserting figures
+
+```         
+-   and figure captions
+```
+
+### Table outputs
+
+### Inserting Images
+
+### hyperlinks
+
+### Formulas with LaTeX
+
+### Citations
+
+manuscript reference [@wyatt2019]
+
+```{r}
+print("Hello!")
+```
