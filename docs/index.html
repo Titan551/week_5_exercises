@@ -401,18 +401,52 @@ doesn’t run)</p>
 #   bibiliography: references.bib
 # ---</code></pre>
 </div>
-<div id="reading-in-data" class="section level3">
-<h3>Reading in data</h3>
+<div id="reading-in-data-and-loading-libraries" class="section level3">
+<h3>Reading in data and loading libraries</h3>
+<p>To read data and load libraries in r markdown you need to make a code
+chunk first. These are siginfied by 3 back ticks (`) and an {r} which
+creates the code chunk. Make sure to close the code chunk by another 3
+back ticks.</p>
+<pre class="r"><code># for example lets do a simply dplyr
+library(tidyverse)</code></pre>
+<pre><code>## Warning: package &#39;ggplot2&#39; was built under R version 4.3.3</code></pre>
+<pre><code>## Warning: package &#39;tibble&#39; was built under R version 4.3.3</code></pre>
+<pre><code>## Warning: package &#39;readr&#39; was built under R version 4.3.3</code></pre>
+<pre><code>## ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+## ✔ dplyr     1.1.4     ✔ readr     2.1.5
+## ✔ forcats   1.0.0     ✔ stringr   1.5.1
+## ✔ ggplot2   3.5.1     ✔ tibble    3.2.1
+## ✔ lubridate 1.9.3     ✔ tidyr     1.3.0
+## ✔ purrr     1.0.2     
+## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+## ✖ dplyr::filter() masks stats::filter()
+## ✖ dplyr::lag()    masks stats::lag()
+## ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+<pre class="r"><code>PSU_fish = read.csv(&quot;../data/PSU_Fish_Density.csv&quot;) # the .. is shell for going back two directories
+head(PSU_fish)</code></pre>
+<pre><code>##   YEAR REGION    STRAT PROT PRIMARY_SAMPLE_UNIT SPECIES_CD density
+## 1 2017 STTSTJ AGRFDEEP    0                6018   BAL VETU     1.0
+## 2 2017 STTSTJ AGRFDEEP    0                6018   CEP FULV     1.0
+## 3 2017 STTSTJ AGRFDEEP    0                6018   EPI GUTT     0.5
+## 4 2017 STTSTJ AGRFDEEP    0                6018   LAC MAXI     0.0
+## 5 2017 STTSTJ AGRFDEEP    0                6018   LUT ANAL     0.0
+## 6 2017 STTSTJ AGRFDEEP    0                6018   LUT GRIS     0.0</code></pre>
 </div>
-<div id="loading-libraries" class="section level3">
-<h3>Loading libraries</h3>
-</div>
-<div id="text-formatting" class="section level3">
-<h3>Text formatting</h3>
-<pre><code>-   italics, bold,</code></pre>
-</div>
-<div id="ordered-and-numbered-lists" class="section level3">
-<h3>Ordered and numbered lists</h3>
+<div id="text-formatting-and-orderednumbered-lists" class="section level3">
+<h3>Text formatting and Ordered/numbered lists</h3>
+<p>To format the text within an R markdown you can easily use the user
+interface under visual with inserting and format, but heres some short
+cuts to do it in the source tab</p>
+<ul>
+<li><p>Headers: to make a header put a hastag (#) before writing and it
+makes it smaller the more (#) you put</p></li>
+<li><p>Italics: to make a sentence in italics, enclose the words in
+(*)</p></li>
+<li><p>bold: similar to italics but two (**) instead of one</p></li>
+<li><p>underline: put ({.underline}) after the words</p></li>
+<li><p>bullet points: use dash marks (-) before the words</p></li>
+<li><p>numbered points:</p></li>
+</ul>
 </div>
 <div id="section-headers" class="section level3">
 <h3>Section headers</h3>

@@ -41,13 +41,21 @@ PSU_fish = read.csv("../data/PSU_Fish_Density.csv") # the .. is shell for going 
 head(PSU_fish)
 ```
 
-### Text formatting
+### Text formatting and Ordered/numbered lists
 
 To format the text within an R markdown you can easily use the user interface under visual with inserting and format, but heres some short cuts to do it in the source tab
 
--   italics, bold,
+-   Headers: to make a header put a hastag (\#) before writing and it makes it smaller the more (\#) you put
 
-### Ordered and numbered lists
+-   Italics: to make a sentence in italics, enclose the words in (\*)
+
+-   bold: similar to italics but two (\*\*) instead of one
+
+-   underline: put ({.underline}) after the words
+
+-   bullet points: use dash marks (-) before the words
+
+-   numbered points:
 
 ### Section headers
 
